@@ -26,8 +26,8 @@ pre {
 
 pre {
 	padding: 1em;
-	background-color: #ccc;
-	border-radius: 1em;
+	background-color: #eee;
+	border-radius: 0.5em;
 }
 
 @media (prefers-color-scheme: dark) {
