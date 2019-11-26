@@ -6,6 +6,198 @@
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<h1>Hey there.</h1>
+		<h1>
+			How to Use the Terminal
+		</h1>
+		<h2>
+			Introduction
+		</h2>
+		<p>
+			The terminal is a powerful tool that allows users to interact with their
+			computer through simply typing commands. In this guide, you will learn
+			basic terminal commands that you can use to navigate through your
+			filesystem, as well as manipulate objects within your filesystem.
+		</p>
+		<h2>
+			Initial Setup
+		</h2>
+		<p>
+			Linux: Linux already has the terminal built in, so you can open it by
+			pressing Ctrl+Alt+T on your keyboard.
+		</p>
+		<p>
+			Mac: Mac already has the terminal built in, so you can open it by opening
+			your "Applications" folder, then opening your "Utilities" folder and
+			clicking on "Terminal".
+		</p>
+		<p>
+			Windows: You will need to download and install MobaXterm (It can be
+			downloaded here: https://mobaxterm.mobatek.net/). Open MobaXterm and start
+			a new session by clicking the "Session" button in the top left corner of
+			the screen. For the session type, select SSH. For the remote host, type
+			your Andrew ID followed by "@unix.andrew.cmu.edu" (It should look like
+			andrewid@unix.andrew.cmu.edu). You will then be prompted to enter your
+			password. Once entered, you will have access to the terminal.
+		</p>
+		<h2>
+			Usage
+		</h2>
+		<p>
+			Now that you understand the motivation for these instructions and have
+			gotten your terminal set up, we may introduce some basic terminology and
+			commands with some examples.
+		</p>
+		<p>
+			Open up your terminal. Note that your cursor should be inside the terminal
+			window, ready for you to type.
+		</p>
+		<p>
+			The short line of text before the cursor is called the 'prompt'. It often
+			contains information like what user is currently logged in, or what
+			directory you are in. It is usually terminated with the $ character. In
+			the following examples, we will use the $ character on the beginning of a
+			line to indicate the prompt.
+		</p>
+		<p>Type 'echo hello' and press Enter. The result should look like this:</p>
+		<pre>
+$ echo hello
+hello</pre
+		>
+		<p>
+			Here you have used your first command. The echo command simply prints out
+			what you give it (in this case, 'hello'). The things that you give
+			commands are called 'arguments', so in this case, we would say 'hello' is
+			an argument to the echo command. In general, commands may be given zero or
+			more arguments, separated by spaces.
+		</p>
+		<p>
+			You will notice that after the command finished, a new prompt (with a new
+			$) was prepared for you to type your next command.
+		</p>
+		<p>
+			The next command we will learn is pwd, which stands for 'print working
+			directory' or 'present working directory'. It takes no arguments and
+			prints the working directory. (You may know 'directory' by its street
+			name, 'folder'.) Try it in your terminal.
+		</p>
+		<p>
+			Let us change the working directory. First we will make a new directory
+			with the aptly-named mkdir. Try 'mkdir testing'. If you see no output,
+			then the directory was successfully created. But if you see an error
+			message, like
+		</p>
+		<pre>
+$ mkdir testing
+mkdir: cannot create directory 'testing': File exists</pre
+		>
+		<p>
+			Then indeed, the directory was not created because something with that
+			name already existed. Try different names until you don't get errors.
+		</p>
+		<p>
+			Once you find a directory name that works, we may change our working
+			directory to that directory. For that, we will use the cd command, where
+			cd stands for 'change directory'. cd (usually) takes 1 argument, the name
+			of the directory you wish to enter.
+		</p>
+		<p>For instance, if you created the directory 'testing', type</p>
+		<pre>$ cd testing</pre>
+		<p>
+			After you cd, use pwd again to show the working directory and note that it
+			has changed.
+		</p>
+		<p>
+			Now you might be wondering, what if I want to get out of the testing
+			directory and go back to my last directory. The command that you want to
+			type is:
+		</p>
+		<pre>$ cd ..</pre>
+		<p>
+			Here, cd still stands for "change directory", but what are the two dots
+			after that? Those two dots are used to denote the parent directory, which
+			is the directory one level above. Hence, after typing "cd testing" and "cd
+			..", we will see that we are back in our original directory.
+		</p>
+		<p>
+			If you would like, you may remove the directory you created with 'rmdir'.
+			For instance, you may say
+		</p>
+		<pre>$ rmdir testing</pre>
+		<p>
+			But note that if the directory has files or other directories inside it,
+			rmdir will refuse to remove the indicated directory.
+		</p>
+		<p>
+			To remove a directory and all of its contents, we must recurse into the
+			directory, remove everything in the directory, and then remove the (now
+			empty) directory itself. For this, we may use the 'rm' command, paired
+			with the '-r' (recursive) option. For instance:
+		</p>
+		<pre>$ rm -r testing</pre>
+		<p>
+			If the thing you wish to remove is just a regular file, you may simply use
+			'rm' with no options. That is, 'rm foo.txt' if 'foo.txt' is some file.
+		</p>
+		<p>
+			Now, suppose you would like to open a file from your current directory,
+			but you don't remember what is the name of that file. Wouldn't it be nice
+			if there's a way to view what are the files and subdirectories that are in
+			your current directory? Try typing in the following:
+		</p>
+		<pre>
+$ ls
+testing</pre
+		>
+		<p>
+			The command "ls" stands for list, which can be used to list everything we
+			have in our current directory. Since we just created a folder called
+			"testing", we will see that printed out in our terminal. You might see
+			additional file names if you have them in your directory.
+		</p>
+		<p>
+			These are the basic commands that you will need to know to navigate your
+			folders. You might be wondering what's the point of terminal if you can do
+			all of these by clicking on your folders. Hold that thought, because
+			terminal is way more powerful than that. It has many more advanced
+			commands that can do very powerful things. We are going to pick a few of
+			those just to show you a glimpse of what you can do.
+		</p>
+		<p>
+			Let's try to create a file in our testing directory (hopefully you should
+			be able to know how to get there by now). Use your favourite word editor
+			to create a file named "a.txt" inside your testing directory, and write
+			the words "I am using the terminal" anywhere in the file.
+		</p>
+		<p>Next, try typing in the following:</p>
+		<pre>
+$ grep terminal a.txt
+I am using the terminal</pre
+		>
+		<p>
+			You should be able to see the line you just typed in display on the
+			command line! What the "grep" command does is that it searches for the
+			string "terminal in the file a.txt, and print out all lines with the
+			string in it. Try it yourself by adding a few more lines to a.txt and run
+			the grep command again. See if the output matches with your expectation!
+		</p>
+		<p>
+			One thing that you may want to do is to search through all your files for
+			a specific string. Say if you are a student, and you really want to search
+			through all your course notes to find the quadratic formula. But there are
+			50 chapters of course notes with hundreds of pages in each chapter. What
+			you can do is this:
+		</p>
+		<pre>$ grep -r quadratic .</pre>
+		<p>
+			What the above grep command does is it will look through all the files
+			residing in your current directory, look for the string "quadratic", and
+			print them all out along with the filename. The "-r" flag is used to
+			indicate that you want to search through every single file in your current
+			directory, in every subdirectory, and in every subdirectory of every
+			subdirectory etc. Note that the . refers to the current directory.
+		</p>
+		<p>
+			The end.
+		</p>
 	</body>
 </html>
