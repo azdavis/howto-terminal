@@ -1,0 +1,11 @@
+{
+	"private": true,
+	"name": "site",
+	"version": "0.1.0",
+	"scripts": {
+		"start": "serve -d src"
+	},
+	"dependencies": {
+		"serve": "^11.2.0"
+	}
+}

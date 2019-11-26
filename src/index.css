@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	color: #333;
+	font-family: Verdana, sans-serif;
+	line-height: 1.4;
+}
+
+body {
+	max-width: 70ch;
+	margin: 0 auto;
+	padding: 0.5em;
+}
+
+a,
+a:visited {
+	color: inherit;
+}
