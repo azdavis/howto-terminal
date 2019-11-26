@@ -61,6 +61,7 @@
 			the following examples, we will use the $ character on the beginning of a
 			line to indicate the prompt.
 		</p>
+		<h3>echo</h3>
 		<p>Type 'echo hello' and press Enter. The result should look like this:</p>
 		<pre>
 $ echo hello
@@ -77,17 +78,18 @@ hello</pre
 			You will notice that after the command finished, a new prompt (with a new
 			$) was prepared for you to type your next command.
 		</p>
+		<h3>pwd</h3>
 		<p>
 			The next command we will learn is pwd, which stands for 'print working
 			directory' or 'present working directory'. It takes no arguments and
 			prints the working directory. (You may know 'directory' by its street
 			name, 'folder'.) Try it in your terminal.
 		</p>
+		<h3>mkdir</h3>
 		<p>
-			Let us change the working directory. First we will make a new directory
-			with the aptly-named mkdir. Try 'mkdir testing'. If you see no output,
-			then the directory was successfully created. But if you see an error
-			message, like
+			You can make new directories with the aptly-named mkdir. Try 'mkdir
+			testing'. If you see no output, then the directory was successfully
+			created. But if you see an error message, like
 		</p>
 		<pre>
 $ mkdir testing
@@ -97,6 +99,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			Then indeed, the directory was not created because something with that
 			name already existed. Try different names until you don't get errors.
 		</p>
+		<h3>cd</h3>
 		<p>
 			Once you find a directory name that works, we may change our working
 			directory to that directory. For that, we will use the cd command, where
@@ -121,6 +124,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			is the directory one level above. Hence, after typing "cd testing" and "cd
 			..", we will see that we are back in our original directory.
 		</p>
+		<h3>rmdir</h3>
 		<p>
 			If you would like, you may remove the directory you created with 'rmdir'.
 			For instance, you may say
@@ -130,6 +134,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			But note that if the directory has files or other directories inside it,
 			rmdir will refuse to remove the indicated directory.
 		</p>
+		<h3>rm</h3>
 		<p>
 			To remove a directory and all of its contents, we must recurse into the
 			directory, remove everything in the directory, and then remove the (now
@@ -141,6 +146,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			If the thing you wish to remove is just a regular file, you may simply use
 			'rm' with no options. That is, 'rm foo.txt' if 'foo.txt' is some file.
 		</p>
+		<h3>ls</h3>
 		<p>
 			Now, suppose you would like to open a file from your current directory,
 			but you don't remember what is the name of that file. Wouldn't it be nice
@@ -165,6 +171,7 @@ testing</pre
 			commands that can do very powerful things. We are going to pick a few of
 			those just to show you a glimpse of what you can do.
 		</p>
+		<h3>grep</h3>
 		<p>
 			Let's try to create a file in our testing directory (hopefully you should
 			be able to know how to get there by now). Use your favourite word editor
