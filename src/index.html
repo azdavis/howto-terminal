@@ -54,6 +54,7 @@
 			Open up your terminal. Note that your cursor should be inside the terminal
 			window, ready for you to type.
 		</p>
+		<img src="./img/blank.png" alt="blank" />
 		<p>
 			The short line of text before the cursor is called the 'prompt'. It often
 			contains information like what user is currently logged in, or what
@@ -63,10 +64,7 @@
 		</p>
 		<h3>echo</h3>
 		<p>Type 'echo hello' and press Enter. The result should look like this:</p>
-		<pre>
-$ echo hello
-hello</pre
-		>
+		<img src="./img/echo-hello.png" alt="echo hello" />
 		<p>
 			Here you have used your first command. The echo command simply prints out
 			what you give it (in this case, 'hello'). The things that you give
@@ -85,11 +83,13 @@ hello</pre
 			prints the path of the working directory. (You may know 'directory' by its
 			street name, 'folder'.) Try it in your terminal.
 		</p>
+		<img src="./img/pwd-homedir.png" alt="pwd" />
 		<h3>ls</h3>
 		<p>
 			The ls command lists the contents of a directory. When you give ls no
 			arguments, it lists the contents of the current directory.
 		</p>
+		<img src="./img/ls-homedir.png" alt="ls" />
 		<h3>mkdir</h3>
 		<p>
 			You can make new directories with the aptly-named mkdir. Try 'mkdir
@@ -108,20 +108,23 @@ mkdir: cannot create directory 'testing': File exists</pre
 			Once you're done, you can use ls again and verify that the new directory
 			was created.
 		</p>
+		<img src="./img/mkdir-testing.png" alt="mkdir" />
 		<h3>cd</h3>
 		<p>
 			You may now change our working directory to that directory. For that, you
 			may use the cd command, where cd stands for 'change directory'. cd
 			(usually) takes 1 argument, the name of the directory you wish to enter.
 		</p>
-		<p>For instance, if you created the directory 'testing', type</p>
-		<pre>$ cd testing</pre>
+		<p>
+			For instance, if you created the directory 'testing', type 'cd testing'.
+		</p>
 		<p>
 			After you cd, use pwd again to show the working directory and note that it
 			has changed. You can also use ls to show the contents of this new
 			directory - but note that the directory is empty, so there's nothing to
 			show.
 		</p>
+		<img src="./img/cd-testing.png" alt="cd testing" />
 		<p>
 			To change the working directory to the parent directory (the directory
 			that contains the current directory), use:
@@ -132,22 +135,20 @@ mkdir: cannot create directory 'testing': File exists</pre
 			'..' denotes the parent directory. We can now ls and pwd to see we're back
 			where we started.
 		</p>
+		<img src="./img/cd-back.png" alt="cd back" />
 		<h3>rmdir</h3>
 		<p>
 			We may remove the directory we created with 'rmdir'. For instance, you may
-			say
+			say 'rmdir testing'.
 		</p>
-		<pre>$ rmdir testing</pre>
-		<p>
-			But note that if the directory has files or other directories inside it,
-			rmdir will refuse to remove the indicated directory.
-		</p>
+		<img src="./img/rmdir-testing.png" alt="rmdir" />
 		<h3>touch</h3>
 		<p>We now know how to make and remove directories, but what about files?</p>
 		<p>To create a file, we may use touch.</p>
-		<h3>cat</h3>
+		<img src="./img/touch-file.png" alt="touch" />
 		<h3>rm</h3>
 		<p>And to remove a file, we may use rm.</p>
+		<img src="./img/rm-file.png" alt="rm" />
 		<p>
 			These are the basic commands that you will need to know to navigate your
 			folders. You might be wondering what's the point of terminal if you can do
@@ -172,15 +173,13 @@ hello
 the terminal is great</pre
 		>
 		<p>Then press Control-D to finish adding things to the file.</p>
-		<p>Next, try typing in the following:</p>
-		<pre>
-$ grep terminal file.txt
-i am using the terminal
-the terminal is great</pre
-		>
+		<p>The whole thing should look like this:</p>
+		<img src="./img/cat-to-file.png" alt="create a file with contents" />
+		<p>Next, try typing in 'grep terminal file.txt'.</p>
+		<img src="./img/grep-file.png" alt="grep the file" />
 		<p>
 			What the "grep" command does is that it searches for the string "terminal
-			in the file a.txt, and print out all lines with the string in it. Try it
+			in the file, and print out all lines with the string in it. Try it
 			yourself by adding a few more lines to file.txt and run the grep command
 			again. See if the output matches with your expectation!
 		</p>

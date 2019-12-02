@@ -30,6 +30,11 @@ pre {
 	border-radius: 0.5em;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color: #ddd;
