@@ -24,7 +24,7 @@
 		<h3>Linux</h3>
 		<p>
 			Linux already has the terminal built in, so you can open it by pressing
-			Ctrl+Alt+T on your keyboard.
+			Control-Alt-T on your keyboard.
 		</p>
 		<h3>Mac</h3>
 		<p>
@@ -82,8 +82,13 @@ hello</pre
 		<p>
 			The next command we will learn is pwd, which stands for 'print working
 			directory' or 'present working directory'. It takes no arguments and
-			prints the working directory. (You may know 'directory' by its street
-			name, 'folder'.) Try it in your terminal.
+			prints the path of the working directory. (You may know 'directory' by its
+			street name, 'folder'.) Try it in your terminal.
+		</p>
+		<h3>ls</h3>
+		<p>
+			The ls command lists the contents of a directory. When you give ls no
+			arguments, it lists the contents of the current directory.
 		</p>
 		<h3>mkdir</h3>
 		<p>
@@ -99,71 +104,50 @@ mkdir: cannot create directory 'testing': File exists</pre
 			Then indeed, the directory was not created because something with that
 			name already existed. Try different names until you don't get errors.
 		</p>
+		<p>
+			Once you're done, you can use ls again and verify that the new directory
+			was created.
+		</p>
 		<h3>cd</h3>
 		<p>
-			Once you find a directory name that works, we may change our working
-			directory to that directory. For that, we will use the cd command, where
-			cd stands for 'change directory'. cd (usually) takes 1 argument, the name
-			of the directory you wish to enter.
+			You may now change our working directory to that directory. For that, you
+			may use the cd command, where cd stands for 'change directory'. cd
+			(usually) takes 1 argument, the name of the directory you wish to enter.
 		</p>
 		<p>For instance, if you created the directory 'testing', type</p>
 		<pre>$ cd testing</pre>
 		<p>
 			After you cd, use pwd again to show the working directory and note that it
-			has changed.
+			has changed. You can also use ls to show the contents of this new
+			directory - but note that the directory is empty, so there's nothing to
+			show.
 		</p>
 		<p>
-			Now you might be wondering, what if I want to get out of the testing
-			directory and go back to my last directory. The command that you want to
-			type is:
+			To change the working directory to the parent directory (the directory
+			that contains the current directory), use:
 		</p>
 		<pre>$ cd ..</pre>
 		<p>
-			Here, cd still stands for "change directory", but what are the two dots
-			after that? Those two dots are used to denote the parent directory, which
-			is the directory one level above. Hence, after typing "cd testing" and "cd
-			..", we will see that we are back in our original directory.
+			We use the cd command as expected to change our current directory, and
+			'..' denotes the parent directory. We can now ls and pwd to see we're back
+			where we started.
 		</p>
-		<p>If you give cd no arguments, you will cd back to your home directory.</p>
 		<h3>rmdir</h3>
 		<p>
-			If you would like, you may remove the directory you created with 'rmdir'.
-			For instance, you may say
+			We may remove the directory we created with 'rmdir'. For instance, you may
+			say
 		</p>
 		<pre>$ rmdir testing</pre>
 		<p>
 			But note that if the directory has files or other directories inside it,
 			rmdir will refuse to remove the indicated directory.
 		</p>
+		<h3>touch</h3>
+		<p>We now know how to make and remove directories, but what about files?</p>
+		<p>To create a file, we may use touch.</p>
+		<h3>cat</h3>
 		<h3>rm</h3>
-		<p>
-			To remove a directory and all of its contents, we must recurse into the
-			directory, remove everything in the directory, and then remove the (now
-			empty) directory itself. For this, we may use the 'rm' command, paired
-			with the '-r' (recursive) option. For instance:
-		</p>
-		<pre>$ rm -r testing</pre>
-		<p>
-			If the thing you wish to remove is just a regular file, you may simply use
-			'rm' with no options. That is, 'rm foo.txt' if 'foo.txt' is some file.
-		</p>
-		<h3>ls</h3>
-		<p>
-			Now, suppose you would like to open a file from your current directory,
-			but you don't remember what is the name of that file. Wouldn't it be nice
-			if there's a way to view what are the files and subdirectories that are in
-			your current directory? Try typing in the following:
-		</p>
-		<pre>
-$ ls
-testing</pre
-		>
-		<p>
-			The command "ls" stands for list, which can be used to list everything we
-			have in our current directory. Since we just created a folder called
-			"testing", we will see that printed out in our terminal. You might see
-			additional file names if you have them in your directory.
-		</p>
+		<p>And to remove a file, we may use rm.</p>
 		<p>
 			These are the basic commands that you will need to know to navigate your
 			folders. You might be wondering what's the point of terminal if you can do
@@ -174,22 +158,31 @@ testing</pre
 		</p>
 		<h3>grep</h3>
 		<p>
-			Let's try to create a file in our testing directory (hopefully you should
-			be able to know how to get there by now). Use your favourite word editor
-			to create a file named "a.txt" inside your testing directory, and write
-			the words "I am using the terminal" anywhere in the file.
+			First, let us make a new file called file.txt. We can do that right from
+			the command line. We can make a new file with touch, as we learned.
 		</p>
+		<p>
+			But the new file is empty. To add things to the file, type the following:
+		</p>
+		<pre>
+$ cat >> file.txt
+hi
+i am using the terminal
+hello
+the terminal is great</pre
+		>
+		<p>Then press Control-D to finish adding things to the file.</p>
 		<p>Next, try typing in the following:</p>
 		<pre>
-$ grep terminal a.txt
-I am using the terminal</pre
+$ grep terminal file.txt
+i am using the terminal
+the terminal is great</pre
 		>
 		<p>
-			You should be able to see the line you just typed in display on the
-			command line! What the "grep" command does is that it searches for the
-			string "terminal in the file a.txt, and print out all lines with the
-			string in it. Try it yourself by adding a few more lines to a.txt and run
-			the grep command again. See if the output matches with your expectation!
+			What the "grep" command does is that it searches for the string "terminal
+			in the file a.txt, and print out all lines with the string in it. Try it
+			yourself by adding a few more lines to file.txt and run the grep command
+			again. See if the output matches with your expectation!
 		</p>
 		<p>
 			One thing that you may want to do is to search through all your files for
