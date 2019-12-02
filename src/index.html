@@ -9,7 +9,37 @@
 		<h1>
 			How to Use the Terminal
 		</h1>
-		<h2>
+		<ol>
+			<li><a href="#introduction">Introduction</a></li>
+			<li>
+				<a href="#initial-setup">Initial setup</a>
+				<ol>
+					<li><a href="#linux">Linux</a></li>
+					<li><a href="#macos">macOS</a></li>
+					<li><a href="#windows">Windows</a></li>
+				</ol>
+			</li>
+			<li>
+				<a href="#basic-commands">Basic commands</a>
+				<ol>
+					<li><a href="#echo">echo - print arbitrary text</a></li>
+					<li><a href="#pwd">pwd - print working directory</a></li>
+					<li><a href="#ls">ls - list directory contents</a></li>
+					<li><a href="#mkdir">mkdir - make directories</a></li>
+					<li><a href="#cd">cd - change working directory</a></li>
+					<li><a href="#rmdir">rmdir - remove directories</a></li>
+					<li><a href="#touch">touch - make (or update) files</a></li>
+					<li><a href="#rm">rm - remove files</a></li>
+				</ol>
+			</li>
+			<li>
+				<a href="#advanced-commands">Advanced commands</a>
+				<ol>
+					<li><a href="#grep">grep - search files for a pattern</a></li>
+				</ol>
+			</li>
+		</ol>
+		<h2 id="introduction">
 			Introduction
 		</h2>
 		<p>
@@ -18,20 +48,20 @@
 			basic terminal commands that you can use to navigate through your
 			filesystem, as well as manipulate objects within your filesystem.
 		</p>
-		<h2>
-			Initial Setup
+		<h2 id="initial-setup">
+			Initial setup
 		</h2>
-		<h3>Linux</h3>
+		<h3 id="linux">Linux</h3>
 		<p>
 			Linux already has the terminal built in, so you can open it by pressing
 			Control-Alt-T on your keyboard.
 		</p>
-		<h3>Mac</h3>
+		<h3 id="macos">macOS</h3>
 		<p>
 			Mac already has the terminal built in, so you can open it by pressing
 			Command-Space, typing "Terminal", and pressing Enter.
 		</p>
-		<h3>Windows</h3>
+		<h3 id="windows">Windows</h3>
 		<p>
 			You will need to download and install MobaXterm. It can be downloaded
 			<a href="https://mobaxterm.mobatek.net">here</a>. Open MobaXterm and start
@@ -41,8 +71,8 @@
 			andrewid@unix.andrew.cmu.edu). You will then be prompted to enter your
 			password. Once entered, you will have access to the terminal.
 		</p>
-		<h2>
-			Usage
+		<h2 id="#basic-commands">
+			Basic commands
 		</h2>
 		<p>
 			Now that you understand the motivation for these instructions and have
@@ -61,7 +91,7 @@
 			the following examples, we will use the $ character on the beginning of a
 			line to indicate the prompt.
 		</p>
-		<h3>echo</h3>
+		<h3 id="echo">echo</h3>
 		<p>
 			Type <code>echo hello</code> and press Enter. The result should look like
 			this:
@@ -78,7 +108,7 @@
 			You will notice that after the command finished, a new prompt (with a new
 			<code>$</code>) was prepared for you to type your next command.
 		</p>
-		<h3>pwd</h3>
+		<h3 id="pwd">pwd</h3>
 		<p>
 			The next command we will learn is pwd, which stands for 'print working
 			directory' or 'present working directory'. It takes no arguments and
@@ -86,13 +116,13 @@
 			street name, 'folder'.) Try it in your terminal.
 		</p>
 		<img src="./img/pwd-homedir.png" alt="pwd" />
-		<h3>ls</h3>
+		<h3 id="ls">ls</h3>
 		<p>
 			The ls command lists the contents of a directory. When you give ls no
 			arguments, it lists the contents of the current directory.
 		</p>
 		<img src="./img/ls-homedir.png" alt="ls" />
-		<h3>mkdir</h3>
+		<h3 id="mkdir">mkdir</h3>
 		<p>
 			You can make new directories with the aptly-named mkdir. Try
 			<code>mkdir testing</code>. If you see no output, then the directory was
@@ -111,7 +141,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			was created.
 		</p>
 		<img src="./img/mkdir-testing.png" alt="mkdir" />
-		<h3>cd</h3>
+		<h3 id="cd">cd</h3>
 		<p>
 			You may now change our working directory to that directory. For that, you
 			may use the cd command, where cd stands for 'change directory'. cd
@@ -139,19 +169,20 @@ mkdir: cannot create directory 'testing': File exists</pre
 			we're back where we started.
 		</p>
 		<img src="./img/cd-back.png" alt="cd back" />
-		<h3>rmdir</h3>
+		<h3 id="rmdir">rmdir</h3>
 		<p>
 			We may remove the directory we created with 'rmdir'. For instance, you may
 			say <code>rmdir testing</code>.
 		</p>
 		<img src="./img/rmdir-testing.png" alt="rmdir" />
-		<h3>touch</h3>
+		<h3 id="touch">touch</h3>
 		<p>We now know how to make and remove directories, but what about files?</p>
 		<p>To create a file, we may use touch.</p>
 		<img src="./img/touch-file.png" alt="touch" />
-		<h3>rm</h3>
+		<h3 id="rm">rm</h3>
 		<p>And to remove a file, we may use rm.</p>
 		<img src="./img/rm-file.png" alt="rm" />
+		<h2 id="advanced-commands">Advanced commands</h2>
 		<p>
 			These are the basic commands that you will need to know to navigate your
 			folders. You might be wondering what's the point of terminal if you can do
@@ -160,7 +191,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			commands that can do very powerful things. We are going to pick a few of
 			those just to show you a glimpse of what you can do.
 		</p>
-		<h3>grep</h3>
+		<h3 id="grep">grep</h3>
 		<p>
 			First, let us make a new file called file.txt. We can do that right from
 			the command line. We can make a new file with touch, as we learned.
