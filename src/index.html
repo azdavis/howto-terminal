@@ -92,9 +92,10 @@
 			line to indicate the prompt.
 		</p>
 		<h3 id="echo">echo</h3>
+		<p>Type</p>
+		<pre>$ echo hello</pre>
 		<p>
-			Type <code>echo hello</code> and press Enter. The result should look like
-			this:
+			and press Enter. The result should look like this:
 		</p>
 		<img src="./img/echo-hello.png" alt="echo hello" />
 		<p>
@@ -113,20 +114,25 @@
 			The next command we will learn is pwd, which stands for 'print working
 			directory' or 'present working directory'. It takes no arguments and
 			prints the path of the working directory. (You may know 'directory' by its
-			street name, 'folder'.) Try it in your terminal.
+			street name, 'folder'.) Try it in your terminal with
 		</p>
+		<pre>$ pwd</pre>
 		<img src="./img/pwd-homedir.png" alt="pwd" />
 		<h3 id="ls">ls</h3>
 		<p>
 			The ls command lists the contents of a directory. When you give ls no
-			arguments, it lists the contents of the current directory.
+			arguments, it lists the contents of the current directory. Try:
 		</p>
+		<pre>$ ls</pre>
 		<img src="./img/ls-homedir.png" alt="ls" />
 		<h3 id="mkdir">mkdir</h3>
 		<p>
 			You can make new directories with the aptly-named mkdir. Try
-			<code>mkdir testing</code>. If you see no output, then the directory was
-			successfully created. But if you see an error message, like
+		</p>
+		<pre>$ mkdir testing</pre>
+		<p>
+			If you see no output, then the directory was successfully created. But if
+			you see an error message, like
 		</p>
 		<pre>
 $ mkdir testing
@@ -149,8 +155,8 @@ mkdir: cannot create directory 'testing': File exists</pre
 		</p>
 		<p>
 			For instance, if you created the directory 'testing', type
-			<code>cd testing</code>.
 		</p>
+		<pre>$ cd testing</pre>
 		<p>
 			After you cd, use pwd again to show the working directory and note that it
 			has changed. You can also use ls to show the contents of this new
@@ -172,15 +178,18 @@ mkdir: cannot create directory 'testing': File exists</pre
 		<h3 id="rmdir">rmdir</h3>
 		<p>
 			We may remove the directory we created with 'rmdir'. For instance, you may
-			say <code>rmdir testing</code>.
+			say
 		</p>
+		<pre>$ rmdir testing</pre>
 		<img src="./img/rmdir-testing.png" alt="rmdir" />
 		<h3 id="touch">touch</h3>
 		<p>We now know how to make and remove directories, but what about files?</p>
-		<p>To create a file, we may use touch.</p>
+		<p>To create a file, we may use touch:</p>
+		<pre>$ touch file.txt</pre>
 		<img src="./img/touch-file.png" alt="touch" />
 		<h3 id="rm">rm</h3>
-		<p>And to remove a file, we may use rm.</p>
+		<p>And to remove a file, we may use rm:</p>
+		<pre>$ rm file.txt</pre>
 		<img src="./img/rm-file.png" alt="rm" />
 		<h2 id="advanced-commands">Advanced commands</h2>
 		<p>
@@ -196,6 +205,7 @@ mkdir: cannot create directory 'testing': File exists</pre
 			First, let us make a new file called file.txt. We can do that right from
 			the command line. We can make a new file with touch, as we learned.
 		</p>
+		<pre>$ touch file.txt</pre>
 		<p>
 			But the new file is empty. To add things to the file, type the following:
 		</p>
@@ -209,7 +219,8 @@ the terminal is great</pre
 		<p>Then press Control-D to finish adding things to the file.</p>
 		<p>The whole thing should look like this:</p>
 		<img src="./img/cat-to-file.png" alt="create a file with contents" />
-		<p>Next, try typing in 'grep terminal file.txt'.</p>
+		<p>Next, try using grep on the file:</p>
+		<pre>$ grep terminal file.txt</pre>
 		<img src="./img/grep-file.png" alt="grep the file" />
 		<p>
 			What the grep command does is that it searches for the string "terminal"
