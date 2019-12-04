@@ -212,6 +212,12 @@ mkdir: cannot create directory 'testing': File exists</pre
 			src="https://asciinema.org/a/XJGlvvLuroeul8VMGde0AfeaD.js"
 			async
 		></script>
+		<p>
+			But note that <code>rmdir testing</code> only worked because 'testing' was
+			empty (it contained no files or directories). If 'testing' was non-empty,
+			then <code>rm -r testing</code> would work. <code>rm -r</code> also works
+			when the directory is empty.
+		</p>
 		<h3 id="touch">touch - make (or update) files</h3>
 		<p>We now know how to make and remove directories, but what about files?</p>
 		<p>To create a file, we may use touch:</p>
